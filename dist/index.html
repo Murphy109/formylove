@@ -29,11 +29,28 @@
 			</div>
 		</header>
 		<nav class="clear">
+			<div class="brand_down">
+					<ul class="brands margin">
+						<li><a href=""><img src="img/brands.jpg"/><p></p><i>探索更多</i><span>品牌文化</span></a></li>
+						<li><a href=""><img src="img/craft.jpg"/><p></p><i>探索更多</i><span>品牌工艺</span></a></li>
+						<li><a href=""><img src="img/shop.jpg"/><p></p><i>探索更多</i><span>品牌店铺</span></a></li>
+						<li><a href=""><img src="img/news.jpg"/><p></p><i>探索更多</i><span>品牌资讯</span></a></li>
+					</ul>
+				</div>
 			<div class="nav margin">
 				<ul class="nav_left">
 					<li><a href="">首页</a></li>
 					<li><a href="">钻戒</a></li>
-					<li><a href="">真爱手链</a></li>
+					<li>
+						<a href="">真爱手链</a>
+						<ul class="down">
+							<li><a href="">永恒系列</a></li>
+							<li><a href="">牵手系列</a></li>
+							<li><a href="">真爱系列</a></li>
+							<li><a href="">唯一系列</a></li>
+							<li><a href="">JACK系列</a></li>
+						</ul>
+					</li>
 					<li><a href="">真爱礼物</a></li>
 					<li><a href="">对戒</a></li>
 					<li><a href="">高级珠宝</a></li>
@@ -44,33 +61,6 @@
 					<li><a href="">实体店</a></li>
 					
 				</ul>
-			<!--
-				<div class="brand">
-						<dl>
-							<dt></dt>
-							<dd></dd>
-							<p></p>
-							
-						</dl>
-						<dl>
-							<dt></dt>
-							<dd></dd>
-							<p></p>
-						</dl>
-						<dl>
-							<dt></dt>
-							<dd></dd>
-							<p></p>
-						</dl>
-						<dl>
-							<dt></dt>
-							<dd></dd>
-							<p></p>
-						</dl>
-						
-					</div>
-				</div>
-			-->
 			
 		</nav>
 		<section id="banner" >
@@ -321,8 +311,14 @@
 			</div>
 			<div class="code">
 				<a href=""><img src="img/rcode.jpg"/></a>
+				<div class="lcode">
+					<a href=""><img src="img/lcode.png"/></a>
+				</div>
 			</div>
-			
+			<div class="toTop">
+				<a href=""><img src="img/top.jpg"/></a>
+				
+			</div>
 		</section>
 	</body>
 </html>
@@ -333,6 +329,30 @@
 	
 </script>
 <script type="text/javascript">
+	$(window).scroll(function(){  
+	    if ($(window).scrollTop()>120){  
+	        $("#top_header").fadeIn(500);  
+	        $(".online .layer_on").fadeIn(500);  
+	    }  
+	    else  
+	    {  
+	        $("#top_header").fadeOut(500);  
+	        $(".online .layer_on").fadeOut(500);  
+	    }  
+	});
 	
-	
+	$("#retop .rcode").hover(function(){
+		$(this).children('.lcode').fadeIn(300);
+	},function(){
+		$(this).children('.lcode').hide();
+	})
+</script>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?8a9019865d28425128da54c137910c89";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
 </script>

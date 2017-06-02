@@ -1,0 +1,92 @@
+.margin {
+  width: 1200px;
+  margin: auto; }
+
+.reg_index {
+  background: url(../img/reg_bg.jpg) no-repeat;
+  background-position: 50% 50%;
+  height: 676px;
+  width: 100%;
+  margin: auto; }
+
+.reg_index .reg_form {
+  margin-top: 70px;
+  float: right;
+  background: #fff;
+  box-shadow: 0 0 5px #444444; }
+
+.reg_index .reg_form form {
+  padding: 40px 30px;
+  float: right; }
+
+.reg_index .reg_form form ul li {
+  width: 318px;
+  height: 38px;
+  margin-bottom: 30px;
+  border: 1px solid #000;
+  display: flex; }
+
+.reg_index .reg_form form ul li input {
+  outline: none;
+  font: 14px/38px "";
+  background: #fff; }
+
+.reg_index .reg_form form ul li:nth-of-type(2) i {
+  display: inline-block;
+  height: 38px;
+  width: 50px;
+  background: url(../img/login1.png) no-repeat 16px 7px; }
+
+.reg_index .reg_form form ul li:nth-of-type(3) i {
+  display: inline-block;
+  height: 38px;
+  width: 50px;
+  background: url(../img/login2.png) no-repeat 14px 12px; }
+
+.reg_index .reg_form form ul li:nth-of-type(4) i {
+  display: inline-block;
+  height: 38px;
+  width: 50px;
+  background: url(../img/login3.png) no-repeat 16px 7px; }
+
+.reg_index .reg_form form ul li:nth-of-type(5) i {
+  display: inline-block;
+  height: 38px;
+  width: 50px;
+  background: url(../img/login3.png) no-repeat 16px 7px; }
+
+.reg_index .reg_form form ul li:nth-of-type(1) {
+  border: 0;
+  border-bottom: 1px solid #ebc8a2;
+  display: block; }
+
+.reg_index .reg_form form ul li h1 {
+  font: 30px "";
+  float: left; }
+
+.reg_index .reg_form form ul li .back {
+  font: 14px/40px "";
+  float: right; }
+
+.reg_index .reg_form form ul li .inp {
+  font: 14px/38px "";
+  border: 0;
+  width: 250px;
+  padding: 0 10px;
+  color: #151518; }
+
+.reg_index .reg_form form ul .check {
+  display: flex;
+  border: 0;
+  padding: 10px 0 0 30px;
+  box-sizing: border-box; }
+
+.reg_index .reg_form form ul .step_sub {
+  border: 0; }
+
+.reg_index .reg_form form ul .step_sub #sub {
+  width: 100%;
+  height: 100%;
+  background: #d0ac83;
+  border: 0;
+  font: 16px/40px ""; }

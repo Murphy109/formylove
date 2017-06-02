@@ -1,6 +1,36 @@
 
 "use strict"
 $(function(){
+	//导航下拉
+	$(".nav_left li").eq(2).hover(function () {
+		$(".down").slideDown("normal");
+	},function(){
+		$(".down").stop().slideUp("normal");
+	})
+	//品牌下拉
+	$(".nav_right li").eq(0).hover(function () {
+		$(".brand_down").slideDown("normal");
+	},function(){
+	});
+	$(".brand_down").hover(function () {
+	},function(){
+		$(".brand_down").stop().slideUp("normal");
+	});
+	$('.brands').on('mouseover',"li", function(event) {
+	  let index = $(this).index();
+	  $(".brands li").eq(index).children("a").children("p,i").css("display","block")
+	  $(".brands li").eq(index).siblings().children("a").children("p,i").css("display","none")
+	});
+	$('.brands li').on('mouseout',function(event) {
+	  $(".brands li").children("a").children("p,i").css("display","none")
+	});
+	//置顶
+	$(".toTop").click(function () {
+	    var speed=1000;//滑动的速度
+	    $('body,html').animate({scrollTop: 0}, speed);
+	    return false;
+	});
+	//banner轮播
 	new Fade({
 		boxId:"#banner",
 		imgArr:["img/a1.jpg","img/a2.jpg","img/a3.jpg","img/a4.jpg"],
