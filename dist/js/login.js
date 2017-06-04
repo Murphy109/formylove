@@ -3,25 +3,33 @@ $(function () {
 	$("#top").load("pubilcTop.html")
 	$("#foot").load("publicFoot.html")
 	
-
+	var cook1=readCookie("tel");
+	var cook2=readCookie("password")
+	$("input[name='tel']").val(cook1)
+	if(){}
 	//正则
-	email   =/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/,
-    pwd     = /^[\w]{8,32}$/,
-    chn     = /^[\u0391-\uFFE5]+$/,
-    idcard  = /^(\d{15}$|^\d{18}$|^\d{17}(\d|X|x))$/,
-    mobile  = /^13[0-9]{1}[0-9]{8}$|15[0-9]{1}[0-9]{8}$|18[0-9]{1}[0-9]{8}$|17[0-9]{1}[0-9]{8}$/,
+	
     //登录
-    $('#login').submit(function(){
-    	var username =  $("input[name='username']").val();
-    	var password = $("input[name='password']").val();
-    	if(!username){
-		  	alert('请输入您的账号！'); 
-		  	return false;
-		}
-    	if(!password){
-		  	alert('请输入您的密码！'); 
-		  	return false;
-		}
+    $('#sub').click(function(){
+    	var phone =  $("input[name='tel']").val();
+    	var pass = $("input[name='password']").val();
+    
+		$.post("login.php",{tel:phone,pass:pass},function(data){
+			console.log(data);
+			if(data=="true"){
+				//登录成功
+				//存cookie
+				saveCookie("tel",$("input[name='tel']").val(),7);
+				saveCookie("password",$("input[name='password']").val(),7);
+				//跳到主页
+				
+			 	location.href="index.html";
+			}else{
+				//登录失败
+				alert("亲，登录失败，用户名或者密码错误");
+			}
+			
+		});
     })
     //注册
 //	$('.step_next').on('click', function(){
@@ -173,4 +181,21 @@ function online(u, w, h) {
     var s = 'width=' + w + ', height=' + h + ', top=' + t + ', left=' + l; 
     s += ', toolbar=no, scrollbars=no, menubar=no, location=no, resizable=no'; 
     open(u, 'oWin', s); 
+}
+function saveCookie (key,value,daycount) {		
+	var d=new Date();
+	d.setDate(d.getDate()+7);
+	document.cookie=encodeURIComponent(key+"="+value)+";expires="+d.toGMTString();
+	//document.cookie=encodeURIComponent(tel+"="+phone)+";equires="+d.toGMTString();
+	
+};
+function readCookie (key) {
+	var str=decodeURIComponent(document.cookie);
+	var arr=str.split("; ");
+	for (var i=0;i<arr.length;i++) {
+		if(arr[i].indexOf(key+"=")==0){
+			return arr[i].substring((key+"=").length); 			
+		}
+	}
+	return "";
 }

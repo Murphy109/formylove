@@ -1,0 +1,116 @@
+@charset "UTF-8";
+.margin {
+  width: 1200px;
+  margin: auto; }
+
+.curr {
+  background: #16151b;
+  color: #fff;
+  font: 12px/50px "";
+  height: 50px; }
+
+.curr .curr_cont a {
+  color: #fff;
+  margin: 0 auto; }
+
+.goods {
+  background: #15161b;
+  overflow: hidden; }
+
+.goods .goods_att {
+  min-height: 693px;
+  overflow: hidden;
+  color: #fff; }
+
+.goods .goods_att .goods_l {
+  width: 855px;
+  height: 626px;
+  background: url(../img/goods_bg.jpg) no-repeat;
+  float: left;
+  position: relative;
+  overflow: hidden; }
+
+.goods .goods_att .goods_l .big_img {
+  width: 855px;
+  height: 626px;
+  position: absolute; }
+
+.goods .goods_att .goods_l .big_img #small {
+  position: absolute;
+  top: 563px; }
+
+.goods .goods_att .goods_r {
+  float: right;
+  width: 345px;
+  min-height: 693px; }
+
+.goods .goods_att .goods_r .r_attr {
+  min-height: 290px;
+  background: #23242b; }
+
+.goods .goods_att .goods_r .r_attr h1 {
+  font: 400 30px "";
+  padding-top: 35px;
+  text-align: center; }
+
+.goods .goods_att .goods_r .r_attr span {
+  display: block;
+  opacity: 0.2;
+  text-align: center;
+  line-height: 26px; }
+
+.goods .goods_att .goods_r .r_attr p {
+  text-align: center;
+  line-height: 28px;
+  padding-top: 12px; }
+
+.goods .goods_att .goods_r .r_attr .shortselect select {
+  border: 1px solid #919295;
+  background: #23242b;
+  color: #fff;
+  padding: 2px 4px;
+  font-family: "微软雅黑";
+  outline: none; }
+
+.goods .goods_att .goods_r .r_price {
+  width: 345px;
+  height: 333px;
+  background: #23242b;
+  margin-top: 3px;
+  position: relative; }
+
+.goods .goods_att .goods_r .r_price h3 {
+  font: 400 30px/110px "";
+  text-align: center; }
+
+.goods .goods_att .goods_r .r_price .flow {
+  width: 215px;
+  height: 32px;
+  border: 1px solid #EDC89E;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  font: 14px/32px "";
+  color: #EDC89E;
+  margin-bottom: 12px; }
+
+.goods .goods_att .goods_r .r_price .buy {
+  width: 217px;
+  height: 34px;
+  line-height: 34px;
+  display: block;
+  text-align: center;
+  background: #EDC89E;
+  margin: 0 auto;
+  font-size: 14px;
+  color: #23242b;
+  margin-bottom: 37px; }
+
+.goods .goods_att .goods_r .r_price .online {
+  width: 217px;
+  height: 30px;
+  line-height: 24px;
+  margin: 0 auto;
+  font-size: 12px;
+  padding-top: 20px;
+  margin-bottom: 11px; }

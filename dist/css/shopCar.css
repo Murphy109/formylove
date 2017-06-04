@@ -1,0 +1,55 @@
+.margin {
+  width: 1200px;
+  margin: auto; }
+
+.curr {
+  background: #16151b;
+  color: #fff;
+  font: 12px/50px "";
+  height: 50px; }
+
+.curr .curr_cont a {
+  color: #fff;
+  margin: 0 auto; }
+
+.shop {
+  background: #15161b;
+  overflow: hidden; }
+
+.shop .shopCar form .table_t {
+  border: 0;
+  background: grey;
+  border-spacing: 2px;
+  width: 100%;
+  margin: 20px 0;
+  text-align: center; }
+
+.shop .shopCar form .table_t tr th {
+  text-align: center;
+  color: #EDC89E;
+  border-spacing: 5px;
+  font: 700 14px/50px "";
+  margin-bottom: 15px; }
+
+.shop .shopCar form .table_cont {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center; }
+
+.shop .shopCar form .table_cont tr td {
+  height: 145px;
+  border-bottom: 1px solid #16151b;
+  background: #23242b; }
+
+.shop .shopCar form .table_b {
+  width: 100%;
+  margin: 20px 0;
+  text-align: center; }
+
+.shop .shopCar form .table_b {
+  border-spacing: 5px;
+  height: 50px;
+  line-height: 50px;
+  background: #23242b;
+  margin-bottom: 15px;
+  color: #EDC89E; }

@@ -1,0 +1,395 @@
+.margin {
+  width: 1200px;
+  margin: auto; }
+
+body {
+  background: #16151b; }
+
+.curr {
+  background: #16151b;
+  color: #fff;
+  font: 12px/50px "";
+  height: 50px; }
+
+.curr .curr_cont a {
+  color: #fff;
+  margin: 0 auto; }
+
+.intr_index {
+  background: #16151b;
+  padding: 100px 0 50px 0; }
+
+.intr_index .intr {
+  margin: auto;
+  box-sizing: border-box;
+  height: 228px; }
+
+.intr_index .intr li {
+  float: left;
+  margin-right: 37px;
+  text-align: center; }
+
+.intr_index .intr li:hover img {
+  transform: scale(1.2); }
+
+.intr_index .intr li:nth-of-type(4) {
+  margin-right: 0; }
+
+.intr_index .intr li a p {
+  width: 272px;
+  height: 191px;
+  overflow: hidden; }
+
+.intr_index .intr li a img {
+  display: block;
+  transition: 1s; }
+
+.intr_index .intr li a span {
+  color: #EDC89E;
+  display: block;
+  border-bottom: 1px solid #EDC89E;
+  font: 12px/35px "";
+  text-align: left; }
+
+.brand_banner img {
+  width: 100%;
+  margin: 0 auto; }
+
+.dia_brand {
+  position: relative;
+  height: 560px;
+  top: -280px;
+  background: #1f202a;
+  letter-spacing: 2px; }
+
+.dia_brand .left {
+  position: absolute;
+  left: 145px;
+  top: 104px; }
+
+.dia_brand .right {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  width: 567px; }
+
+.dia_brand .right h2 {
+  color: #edc89e;
+  font: 19px/49px ""; }
+
+.dia_brand .right h1 {
+  color: #edc89e;
+  font: 52px/82px ""; }
+
+.dia_brand .right h3 {
+  color: #fff;
+  font: 400 18px/40px ""; }
+
+.dia_brand .right span {
+  width: 40px;
+  height: 2px;
+  background: #fff; }
+
+.dia_brand .right p {
+  color: #c6c7c8;
+  font: 12px/25px ""; }
+
+.dia_brand .right a {
+  margin-top: 50px;
+  color: #fff;
+  font: 12px/25px "";
+  width: 97px;
+  border: 1px solid #fff;
+  display: block;
+  text-align: center; }
+
+.dia_brand .right a:hover {
+  color: #edc89e;
+  font: 12px/25px "";
+  width: 97px;
+  border: 1px solid #edc89e; }
+
+.dia_brand .right img {
+  position: absolute;
+  right: 0;
+  bottom: -157px; }
+
+.title_line {
+  border-bottom: 1px solid #fff;
+  margin-top: -158px;
+  margin-bottom: 40px; }
+
+.title_line .title {
+  height: 50px; }
+
+.title_line .title h2 {
+  font: 26px "";
+  text-align: center;
+  color: #fff; }
+
+.title_line .title span {
+  margin: auto;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  display: block;
+  width: 1px; }
+
+.title_line .title b {
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #fff;
+  margin: auto;
+  top: 9px;
+  position: relative; }
+
+.dia_title .title {
+  height: 50px;
+  text-align: center;
+  color: #fff;
+  padding: 40px 0; }
+
+.dia_title .title h2 {
+  font: 700 26px ""; }
+
+.dia_title .title span {
+  font: 12px/32px; }
+
+.dia_cont {
+  overflow: hidden;
+  height: auto; }
+
+.dia_cont ul li {
+  float: left;
+  margin: 0 28px 26px 0;
+  position: relative;
+  width: 381px;
+  height: 342px; }
+
+.dia_cont ul li p {
+  position: absolute;
+  top: 290px;
+  left: 110px;
+  color: #fff; }
+
+.dia_cont ul.new_work li:nth-of-type(1) {
+  width: 100%;
+  height: 433px;
+  background: url(../img/pro_bg.jpg) no-repeat;
+  margin-right: 0;
+  position: relative; }
+
+.dia_cont ul.classic li:nth-of-type(1) {
+  width: 100%;
+  height: 433px;
+  background: url(../img/pro01_bg.jpg) no-repeat;
+  margin-right: 0;
+  position: relative; }
+
+.dia_cont ul li:nth-of-type(1) a img {
+  position: absolute;
+  left: 260px;
+  top: 56px; }
+
+.dia_cont ul.new_work li:nth-of-type(1) .shine {
+  position: absolute;
+  top: 160px;
+  right: 174px;
+  font: 400 22px/35px "";
+  color: #EDC89E; }
+
+.dia_cont ul.classic li:nth-of-type(1) .shine {
+  position: absolute;
+  top: 110px;
+  right: 120px;
+  font: 400 30px/45px "";
+  color: #fff; }
+
+.dia_cont ul.new_work li:nth-of-type(1) p {
+  position: absolute;
+  top: 400px;
+  left: 330px;
+  color: #fff; }
+
+.dia_cont ul.classic li:nth-of-type(1) p {
+  position: absolute;
+  top: 350px;
+  left: 280px;
+  color: #fff; }
+
+.dia_cont ul li:nth-of-type(4) {
+  position: relative;
+  margin-right: 0; }
+
+.dia_cont ul.classic li:nth-of-type(5) {
+  width: 791px;
+  height: 342px; }
+
+.dia_cont ul.classic li:nth-of-type(5) p {
+  width: 500px;
+  position: absolute;
+  font: 700 22px/30px "";
+  left: 40px;
+  top: 230px; }
+
+.dia_cont ul.classic li:nth-of-type(6) {
+  width: auto;
+  position: relative; }
+
+.dia_cont ul.classic li:nth-of-type(6) p {
+  width: 500px;
+  position: absolute;
+  top: 285px;
+  left: 125px; }
+
+.dia_cont ul li a {
+  position: relative; }
+
+.dia_cont ul li a img {
+  position: absolute; }
+
+.dia_cont ul li p span {
+  font-weight: 700;
+  color: #edc89e; }
+
+.title_lines {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #fff; }
+
+.title_lines .titles {
+  height: 50px; }
+
+.title_lines .titles h2 {
+  font: 700 26px "";
+  text-align: center;
+  color: #fff; }
+
+.title_lines .titles span {
+  margin: auto;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  display: block;
+  width: 1px; }
+
+.title_lines .titles b {
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: #fff;
+  margin: auto;
+  top: 9px;
+  position: relative; }
+
+.dia_goods {
+  overflow: hidden; }
+
+.dia_goods ul {
+  overflow: hidden; }
+
+.dia_goods ul li {
+  width: 291px;
+  height: 230px;
+  float: left;
+  margin: 0 0px 10px 12px;
+  position: relative;
+  background: #16151b; }
+
+.dia_goods ul li:hover .dia_price {
+  opacity: 1; }
+
+.dia_goods ul li img {
+  position: absolute;
+  background: #16151b; }
+
+.dia_goods ul li .dia_price {
+  transition: 1s;
+  position: absolute;
+  width: 291px;
+  height: 230px;
+  opacity: 0; }
+
+.dia_goods ul li .dia_price a {
+  width: 291px;
+  height: 230px;
+  text-align: center; }
+
+.dia_goods ul li .dia_price a h4 {
+  font: 400 14px/34px "";
+  color: snow;
+  position: absolute;
+  z-index: 99;
+  top: 108px;
+  left: 117px; }
+
+.dia_goods ul li .dia_price a p {
+  height: 50px;
+  font: 12px/50px "";
+  text-align: center;
+  color: snow;
+  z-index: 99;
+  position: absolute;
+  top: 75px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto; }
+
+.dia_goods ul li .dia_price .price_bg {
+  position: absolute;
+  width: 287px;
+  height: 226px;
+  border: 2px solid #EDC89E;
+  background: #000;
+  opacity: 0.5;
+  top: 0;
+  left: 0; }
+
+.dia_goods ul li:nth-of-type(1) {
+  margin-left: 0;
+  width: 593px;
+  height: 466px; }
+
+.dia_goods ul li:nth-of-type(1) .dia_price {
+  position: absolute;
+  width: 593px;
+  height: 466px; }
+
+.dia_goods ul li:nth-of-type(1) .dia_price h4 {
+  position: absolute;
+  left: 265px;
+  top: 375px; }
+
+.dia_goods ul li:nth-of-type(1) .dia_price p {
+  position: absolute;
+  top: 400px; }
+
+.dia_goods ul li:nth-of-type(1) .dia_price .price_bg {
+  position: absolute;
+  width: 593px;
+  height: 466px; }
+
+.dia_goods .goods2 li {
+  width: 291px;
+  height: 230px;
+  float: right;
+  margin: 0 12px 10px 0px;
+  position: relative;
+  background: #16151b; }
+
+.dia_goods .goods2 li:nth-of-type(1) {
+  margin-right: 0;
+  width: 593px;
+  height: 466px; }
+
+.dia_goods .and_more {
+  width: 272px;
+  height: 40px;
+  margin: 0 auto;
+  background: #23242b;
+  display: block;
+  text-align: center;
+  font: 600 17px/40px "";
+  margin-top: 30px;
+  color: #fff; }

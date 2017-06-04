@@ -3,6 +3,15 @@ $(function () {
 	$("#top").load("pubilcTop.html")
 	$("#foot").load("publicFoot.html")
 	
+	
+	//xhr.send();
+	//xhr.open("get","register.php?email=$("#email").val()",true);//设置请求参数
+	//xhr.onreadystatechange=function(){//设置回调函数
+	//	if(xhr.readyState==4 && xhr.status==200){
+	//		showInfo(xhr.responseText);
+	//	}
+	//}
+	//xhr.send();
 
 	//正则
 	email   =/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/,
@@ -56,33 +65,72 @@ $(function () {
 //	  }
 //	  
 //	});
+		
+		
+		
+		
+		
+		
+	$("#userName").blur(function(){
+		var phone = $("input[name='tel']").val();
+		$.get("register.php",{tel:phone},function(data){
+			if(!mobile.test(phone)){
+				alert('请输入正确的手机号码！'); 
+				return false;
+			}else if(mobile.test(phone)){
+				if(data=="0"){
+					alert("该手机号已注册");
+				}
+			}
+		})	
+	});
+	$("#email").blur(function(){
+		var mail = $("input[name='email']").val();
+		
+			if(!email.test(mail)){
+				alert('请输入正确的邮箱地址！');
+				return false;
+			}
+			
+	});	
 	
+	$("#password").blur(function(){
+		var pass = $("input[name='password']").val();
+		if(!pass){
+			alert('请输入密码，请输入8位以上密码！'); 
+			return false;
+		}
+		if(!pwd.test(pass)){
+			alert('密码太简单了！请输入8位以上密码！')
+			return false;
+		}
+			
+	});	
+	$("#cpassword").blur(function(){
+		var pass = $("input[name='password']").val();
+		var cpass = $("input[name='cpassword']").val();
+		
+	
+		if(cpass != pass){
+			alert('两次密码输入不一致！');
+			return false;
+		}
+			
+	});	
 	$('#sub').on('click',function(){
 		var phone = $("input[name='tel']").val();
 		var mail = $("input[name='email']").val();
 		var pass = $("input[name='password']").val();
 		var cpass = $("input[name='cpassword']").val();
-		if(!mobile.test(phone)){
-		  	alert('请输入正确的手机号码！'); 
-		  	return false;
-		 }
-		  if(!email.test(mail)){
-		  	alert('请输入正确的邮箱地址！'); 
-		  	return false;
-		  } 
-		  if(!pass){
-		  	alert('请输入密码，请输入8位以上密码！'); 
-		  	return false;
-		  }
-		  if(!pwd.test(pass)){
-		  	alert('密码太简单了！请输入8位以上密码！'); 
-		  	return false;
-		  }
-		  if(cpass != pass){
-		  	alert('两次密码输入不一致！'); 
-		  	return false;
-		  }
+
+		$.post("saveregister.php",{tel:phone,email:mail,password:pass,cpassword:cpass},function(data){
+			location.href(index.html)
+		})
+		
+		  
 	});
+});	
+	
 	
 	$('.step_prev').click(function(){
 		$('.form_step').stop().animate({left:'0px'},300)
@@ -166,7 +214,7 @@ $(function () {
 	  $(this).addClass("on_check").parent().parent().parent().parent().siblings().find('.pay_list').removeClass("on_check");
 	  $(this).parent().siblings().find('.pay_list').removeClass("on_check");
 	})
-})
+
 function online(u, w, h) { 
     var l = (screen.width - w) / 2; 
     var t = (screen.height - h) / 2; 

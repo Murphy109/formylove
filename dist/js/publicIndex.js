@@ -35,4 +35,11 @@ $(function(){
 	    $('body,html').animate({scrollTop: 0}, speed);
 	    return false;
 	});
+	$(document).on('scroll',function(){
+		if($(document).scrollTop()>500){
+			$('.toTop img').fadeIn();
+		}else{
+			$('.toTop img').fadeOut();
+		}
+	})
 });

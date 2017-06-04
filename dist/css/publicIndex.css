@@ -152,7 +152,7 @@ nav .nav_left li:nth-of-type(3) .down {
   width: 96px;
   position: absolute;
   top: 51px;
-  z-index: 99;
+  z-index: 9999;
   text-align: center;
   background: #fff;
   display: none; }
@@ -172,7 +172,7 @@ nav .nav_left > li:hover a {
 
 nav .nav_left > li a {
   display: flex;
-  font: 14px/49px "";
+  font: 14px/48px "";
   color: #fff;
   padding: 0 20px; }
 
@@ -401,3 +401,10 @@ footer {
 
 .reTop .code {
   margin: 3px 0; }
+
+.reTop .toTop {
+  width: 51px;
+  height: 34px; }
+
+.reTop .toTop img {
+  display: none; }
