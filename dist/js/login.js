@@ -6,7 +6,7 @@ $(function () {
 	var cook1=readCookie("tel");
 	var cook2=readCookie("password")
 	$("input[name='tel']").val(cook1)
-	if(){}
+	
 	//正则
 	
     //登录

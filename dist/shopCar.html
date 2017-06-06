@@ -29,11 +29,11 @@
 					<table class="table_cont">
 						<tr>
 							<td width="160px">dsd</td>
-							<td width="310px">fdsf</td>
+							<td width="310px"><span>sadsaf</span></td>
 							<td width="240px">fdsf</td>
-							<td width="90px">fsdf</td>
-							<td width="180px">fdsf</td>
-							<td width="220px">fsd</td>
+							<td width="90px"><input id="cutBtn01" type="button" value="-" class="cut"/><span>1</span><input id="addBtn01" type="button" value="+" class="add"/></td>
+							<td width="180px">100</td>
+							<td width="220px">0</td>
 						</tr>
 					</table>
 					<table class="table_b">
@@ -58,5 +58,154 @@
 </script>
 
 <script type="text/javascript" src="js/shopCar.js">
+	
+
+
+</script>
+<script type="text/javascript">
+	
+	$(function () {
+		createGoods ()
+		init () ;
+		saveData();
+		getData();
+		$("#cutBtn01").click(cal2);
+		$("#addBtn01").click(cal1);
+		calTotalMoney();
+		
+	});
+	
+	function createGoods () {
+		var id= 1;
+		$.get("regId.php",{good:id},function(data){
+			if(data!=0){
+				for(i=0;i<data;i++){
+					$(".table_t").after("<table class='table_cont'><tr><td width='160px'></td><td width='310px'><span></span></td><td width='240px'></td><td width='90px'><input id='cutBtn01' type='button' value='-' class='cut'/><span></span><input id='addBtn01' type='button' value='+' class='add'/></td><td width='180px'></td><td width='220px'></td></tr></table>")
+				}
+			}
+		})
+			
+//		if(i=0;i<getCookie("id").length;i++){
+//			$(".table_t").after("<table class='table_cont'><tr><td width='160px'></td><td width='310px'><span></span></td><td width='240px'></td><td width='90px'><input id='cutBtn01' type='button' value='-' class='cut'/><span></span><input id='addBtn01' type='button' value='+' class='add'/></td><td width='180px'></td><td width='220px'></td></tr></table>")
+//		}
+	}
+	function init () {
+		var table=$("form table").length;
+		for(var i=2;i<table;i++){
+			var goods = $(".table_cont:first tr td").eq(1);
+			var goodsNum = $(".table_cont:first tr td").eq(3).children("span");
+			var goodsName = goods.children().eq(0).text();
+			var price = $(".table_cont:first tr td").eq(4).text();
+			var count = goodsNum.text();
+			var money=$(".table_cont:first tr td").eq(5).text(price*count);
+		}
+	}
+	function saveCookie(key,value,dayCount){
+		var d = new Date();
+		d.setDate(d.getDate()+dayCount);
+		document.cookie = key+"="+encodeURIComponent(value)+";expires="+d.toGMTString();
+	}
+	function saveData(){
+	//保存 商品名称，单价，数量
+		var table=$("form table").length;
+		for(var i=2;i<table;i++){
+			var goods = $(".table_cont:first tr td").eq(1);
+			//console.log(goods.text())
+			var goodsNum = $(".table_cont:first tr td").eq(3).children("span");
+			var goodsName = goods.children().eq(0).text();
+			//console.log(goodsName)
+			saveCookie("goodsName",goodsName,7);
+			var price = $(".table_cont:first tr td").eq(4).text();
+			saveCookie("price",price,7);
+			var count = goodsNum.text();
+			saveCookie("count",count,7);
+			var money=$(".table_cont:first tr td").eq(5).text();
+			//$(".table_cont:first tr td").eq(5).text(parseInt(goodsNum)*parseInt(price))
+			saveCookie("money",money,7);
+		}
+		//alert(decodeURIComponent(document.cookie));
+	}
+	
+	function getCookie(key){
+	//1、获取cookie的内容；//color=red; userName=jzm; password=123; auserName=ppp
+		var str = decodeURIComponent(document.cookie);
+		//2、转换成数组
+		var arr = str.split("; ");
+		
+		//3、循环数组找key
+		for(var i=0;i<arr.length;i++){
+			if(arr[i].indexOf(key+"=")==0){
+				return arr[i].substring((key+"=").length);
+			}
+		}
+		//4、返回
+		return "";
+	}
+	function getData () {
+		var table=$("form table").length;
+		for(var i=2;i<table;i++){
+			var goods = $(".table_cont:first tr td").eq(1);
+			//console.log(goods.text())
+			var goodsNum = $(".table_cont:first tr td").eq(3).children("span");
+			
+			var goodsName = goods.children().eq(0).text(getCookie("goodsName"));
+			//console.log(goodsName)
+			var price = $(".table_cont:first tr td").eq(4).text(getCookie("price"));
+			
+			var count = goodsNum.text(getCookie("count"));
+			var money=$(".table_cont:first tr td").eq(5).text(getCookie("money"))
+		}
+	}
+	//计算总金额
+	function calTotalMoney(){		
+		var totalMoney = 0;
+		var childs = $("form .table_cont:first tr td");
+		
+		totalMoney += parseInt(childs.eq(5).text());
+		
+		$(".table_b:first tr td").eq(5).text(totalMoney);
+	}
+	
+	//加法按钮的计算
+	function cal1(){//this在事件对应的函数里，代表事件源。
+		//1、修改数量
+		//this.previousElementSibling//当前元素的前面一个元素节点
+		$(this).parents("td").next().next().text(price*1)
+		$(this).prev().text(parseInt($(this).prev().text())+1);
+		
+		//2、修改金额(单价*数量)
+		var price = parseInt($(this).parents("td").next().text());
+		var num = parseInt($(this).prev().text());
+		$(this).parents("td").next().next().text(price*num);
+		console.log($(this).parents("td").next().next().text(price*num))
+		//3、修改总金额
+		calTotalMoney();
+		
+		//4、保存cookie（保存数据）
+		saveData();
+		
+	}
+	function cal2(){//this在事件对应的函数里，代表事件源。
+		//1、修改数量
+		//this.previousElementSibling//当前元素的前面一个元素节点
+		if(parseInt($(this).next().text())>1){
+			$(this).next().text(parseInt($(this).next().text())-1)
+		}else{
+			alert("购买数量不能小于1件！")
+		}
+		
+		
+		//2、修改金额(单价*数量)
+		var price = parseInt($(this).parents("td").next().text());
+		var num = parseInt($(this).next().text());
+		$(this).parents("td").next().next(price*num);
+		
+		//3、修改总金额
+		calTotalMoney();
+		
+		//4、保存cookie（保存数据）
+		saveData();
+		
+	}
 	
 </script>

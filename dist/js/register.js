@@ -4,14 +4,7 @@ $(function () {
 	$("#foot").load("publicFoot.html")
 	
 	
-	//xhr.send();
-	//xhr.open("get","register.php?email=$("#email").val()",true);//设置请求参数
-	//xhr.onreadystatechange=function(){//设置回调函数
-	//	if(xhr.readyState==4 && xhr.status==200){
-	//		showInfo(xhr.responseText);
-	//	}
-	//}
-	//xhr.send();
+	
 
 	//正则
 	email   =/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/,
@@ -70,7 +63,7 @@ $(function () {
 		
 		
 		
-		
+	var a=0;	
 	$("#userName").blur(function(){
 		var phone = $("input[name='tel']").val();
 		$.get("register.php",{tel:phone},function(data){
@@ -80,8 +73,12 @@ $(function () {
 			}else if(mobile.test(phone)){
 				if(data=="0"){
 					alert("该手机号已注册");
+				}else{
+					return a++;
 				}
+				
 			}
+			
 		})	
 	});
 	$("#email").blur(function(){
@@ -90,7 +87,10 @@ $(function () {
 			if(!email.test(mail)){
 				alert('请输入正确的邮箱地址！');
 				return false;
+			}else{
+				return a++;
 			}
+			
 			
 	});	
 	
@@ -103,6 +103,8 @@ $(function () {
 		if(!pwd.test(pass)){
 			alert('密码太简单了！请输入8位以上密码！')
 			return false;
+		}else{
+			return a++;
 		}
 			
 	});	
@@ -114,6 +116,8 @@ $(function () {
 		if(cpass != pass){
 			alert('两次密码输入不一致！');
 			return false;
+		}else{
+			return a++;
 		}
 			
 	});	
@@ -122,12 +126,11 @@ $(function () {
 		var mail = $("input[name='email']").val();
 		var pass = $("input[name='password']").val();
 		var cpass = $("input[name='cpassword']").val();
-
-		$.post("saveregister.php",{tel:phone,email:mail,password:pass,cpassword:cpass},function(data){
-			location.href(index.html)
+		if(a==4){
+			$.post("saveregister.php",{tel:phone,email:mail,password:pass,cpassword:cpass},function(data){
+			location.href="index.html";
 		})
-		
-		  
+		}
 	});
 });	
 	

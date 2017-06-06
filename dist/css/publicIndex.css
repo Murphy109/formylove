@@ -165,7 +165,7 @@ nav .nav_left li:nth-of-type(3) .down li a {
   color: #444; }
 
 nav .nav_left > li:hover {
-  border-bottom: 3px solid #edc89e; }
+  border-bottom: 2px solid #edc89e; }
 
 nav .nav_left > li:hover a {
   color: #edc89e; }
