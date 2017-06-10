@@ -3,10 +3,10 @@ $(function () {
 	$("#top").load("pubilcTop.html")
 	$("#foot").load("publicFoot.html")
 	
-	var cook1=readCookie("tel");
-	var cook2=readCookie("password")
+	var cook1=getCookie("tel");
+	var cook2=getCookie("password")
 	$("input[name='tel']").val(cook1)
-	
+	//console.log(cook1)
 	//正则
 	
     //登录
@@ -14,13 +14,14 @@ $(function () {
     	var phone =  $("input[name='tel']").val();
     	var pass = $("input[name='password']").val();
     
-		$.post("login.php",{tel:phone,pass:pass},function(data){
-			console.log(data);
+		$.post("login.php",{tel:phone,"pass":pass},function(data){
+			//console.log(data);
 			if(data=="true"){
 				//登录成功
 				//存cookie
 				saveCookie("tel",$("input[name='tel']").val(),7);
-				saveCookie("password",$("input[name='password']").val(),7);
+				console.log(getCookie("tel"))
+				//saveCookie("password",$("input[name='password']").val(),7);
 				//跳到主页
 				
 			 	location.href="index.html";
@@ -182,14 +183,12 @@ function online(u, w, h) {
     s += ', toolbar=no, scrollbars=no, menubar=no, location=no, resizable=no'; 
     open(u, 'oWin', s); 
 }
-function saveCookie (key,value,daycount) {		
-	var d=new Date();
-	d.setDate(d.getDate()+7);
-	document.cookie=encodeURIComponent(key+"="+value)+";expires="+d.toGMTString();
-	//document.cookie=encodeURIComponent(tel+"="+phone)+";equires="+d.toGMTString();
-	
-};
-function readCookie (key) {
+function saveCookie(key,value,dayCount){
+	var d = new Date();
+	d.setDate(d.getDate()+dayCount);
+	document.cookie = key+"="+encodeURIComponent(value)+";expires="+d.toGMTString();
+}
+function getCookie (key) {
 	var str=decodeURIComponent(document.cookie);
 	var arr=str.split("; ");
 	for (var i=0;i<arr.length;i++) {

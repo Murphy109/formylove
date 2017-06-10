@@ -128,7 +128,7 @@ $(function () {
 		var cpass = $("input[name='cpassword']").val();
 		if(a==4){
 			$.post("saveregister.php",{tel:phone,email:mail,password:pass,cpassword:cpass},function(data){
-			location.href="index.html";
+			location.href="login.html";
 		})
 		}
 	});

@@ -69,6 +69,7 @@
   float: right; }
 
 .reg_index .reg_form form ul li .inp {
+  background: #fff;
   font: 14px/38px "";
   border: 0;
   width: 250px;

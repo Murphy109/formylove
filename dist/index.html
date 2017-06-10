@@ -7,40 +7,57 @@
 		<link rel="stylesheet" href="css/index.css" />
 	</head>
 	<body>
+		<audio controls="controls"  autoplay="autoplay" loop="loop" >
+		<source src="audio/周杰伦 - 告白气球.mp3" type="audio/mpeg" />
+		</audio>
 		<header>
 			<div class="header margin">
-				<div class="header_left">
-					<div class="phone">
-						<img src="img/phone.png"/>
+				<div class="head">
+					<div class="header_left">
+						<div class="phone">
+							<img src="img/phone.png"/>
+						</div>
+						<h3>6699-054-520</h3>
+						<p>9:00-21:00 <em>7x12</em></p>
 					</div>
-					<h3>6699-054-520</h3>
-					<p>9:00-21:00 <em>7x12</em></p>
+					<div class="header_center">
+						亲爱的： <span></span> 欢迎您！
+						<i class="quit">退出登录</i>
+					</div>
+					
+					<div class="header_right">
+						
+						<ul class="logins">
+							<li><a href="login.html">登录</a>/<a href="register.html">注册</a></li>
+							<li><a href="">在线客服</a></li>
+							<li><a href="shopCar.html">购物车</a></li>
+						</ul>
+						<ul class="person">
+							<li><a href="login.html">个人中心</a></li>
+							<li><a href="">在线客服</a></li>
+							<li><a href="shopCar.html">购物车</a></li>
+						</ul>
+					</div>
 				</div>
+					
 				<div class="logo">
-					<a href="http://www.formyrose.com"><img src="img/logo.png" alt="FORMYROSE官网，一生只为一人定制"/></a>
-				</div>
-				<div class="header_right">
-					<ul>
-						<li><a href="login.html">登录</a>/<a href="register.html">注册</a></li>
-						<li><a href="">在线客服</a></li>
-						<li><a href="shopCar.html">购物车</a></li>
-					</ul>
+					<a href="index.html"><img src="img/logo.png" alt="FORMYROSE官网，一生只为一人定制"/></a>
 				</div>
 			</div>
 		</header>
 		<nav class="clear">
 			<div class="brand_down">
 					<ul class="brands margin">
-						<li><a href=""><img src="img/brands.jpg"/><p></p><i>探索更多</i><span>品牌文化</span></a></li>
-						<li><a href=""><img src="img/craft.jpg"/><p></p><i>探索更多</i><span>品牌工艺</span></a></li>
-						<li><a href=""><img src="img/shop.jpg"/><p></p><i>探索更多</i><span>品牌店铺</span></a></li>
-						<li><a href=""><img src="img/news.jpg"/><p></p><i>探索更多</i><span>品牌资讯</span></a></li>
+						<li><a href="brandCulture.html"><img src="img/brands.jpg"/><p></p><i>探索更多</i><span>品牌文化</span></a></li>
+						<li><a href="brandCulture.html"><img src="img/craft.jpg"/><p></p><i>探索更多</i><span>品牌工艺</span></a></li>
+						<li><a href="brandCulture.html"><img src="img/shop.jpg"/><p></p><i>探索更多</i><span>品牌店铺</span></a></li>
+						<li><a href="brandCulture.html"><img src="img/news.jpg"/><p></p><i>探索更多</i><span>品牌资讯</span></a></li>
 					</ul>
 				</div>
 			<div class="nav margin">
 				<ul class="nav_left">
-					<li><a href="">首页</a></li>
-					<li><a href="">钻戒</a></li>
+					<li><a href="index.html">首页</a></li>
+					<li><a href="goodslist.html">钻戒</a></li>
 					<li>
 						<a href="">真爱手链</a>
 						<ul class="down" id="down">
@@ -68,7 +85,7 @@
 		</section>
 		<section class="bannerList">
 			<ul class="margin">
-				<li><a href=""><img src="img/diamond_bars.jpg"/></a></li>
+				<li><a href="goodslist.html"><img src="img/diamond_bars.jpg"/></a></li>
 				<li><a href=""><img src="img/hand_bars.jpg"/></a></li>
 				<li><a href=""><img src="img/gift_bars.jpg"/></a></li>
 			</ul>
@@ -347,12 +364,8 @@
 		$(this).children('.lcode').hide();
 	})
 </script>
-<script>
-	var _hmt = _hmt || [];
-	(function() {
-	  var hm = document.createElement("script");
-	  hm.src = "//hm.baidu.com/hm.js?8a9019865d28425128da54c137910c89";
-	  var s = document.getElementsByTagName("script")[0]; 
-	  s.parentNode.insertBefore(hm, s);
-	})();
+<script type="text/javascript" src="js/cookie.js">
 </script>
+
+	
+

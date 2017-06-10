@@ -2,76 +2,122 @@
   width: 1200px;
   margin: auto; }
 
+audio {
+  position: absolute;
+  left: 230px;
+  top: 15px;
+  background: url(../img/top_bg.gif) repeat; }
+
 header {
   background: url(../img/top_bg.gif) repeat;
   height: 215px;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  overflow: hidden; }
 
 header .header {
-  display: flex;
-  position: relative;
   color: #fff; }
 
-header .header_left {
+header .head {
+  width: 100%;
+  overflow: hidden; }
+
+header .head .header_left {
+  float: left;
   margin-top: 14px;
   position: relative;
   width: 100px;
   color: #fff; }
 
-header .header_left h3 {
+header .head .header_left h3 {
   position: absolute;
   left: 35px;
   top: 0px;
   width: 100px;
   font: 14px/16px ""; }
 
-header .header_left p {
+header .head .header_left p {
   position: absolute;
   left: 35px;
   top: 16px;
   width: 100px;
   font: 12px/18px ""; }
 
-header .header_left p em {
+header .head .header_left p em {
   display: inline-block;
   font: 8px/18px ""; }
 
-header .logo {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: auto;
-  margin-top: 98px;
-  width: 268px; }
+header .head .header_center {
+  float: left;
+  width: 310px;
+  font: 12px/50px "";
+  height: 50px;
+  margin-left: 500px; }
 
-header .header_right {
-  position: absolute;
-  right: 0;
+header .head .header_right {
+  width: 240px;
+  position: relative;
+  float: right;
   height: 41px;
   border-bottom: 1px solid #edc89e;
   display: flex; }
 
-header .header_right ul {
-  display: flex; }
+header .head .header_right ul {
+  display: flex;
+  position: absolute;
+  left: 0; }
 
-header .header_right li {
+header .head .header_right .logins {
+  position: absolute;
+  z-index: 99;
+  opacity: 1; }
+
+header .head .header_right .person {
+  position: absolute;
+  z-index: 10;
+  opacity: 0; }
+
+header .head .header_center {
+  opacity: 0; }
+
+header .head .header_center span {
+  color: #fff;
+  line-height: 40px;
+  padding: 0 10px;
+  color: #edc89e; }
+
+header .head .header_center i:hover {
+  cursor: pointer; }
+
+header .head .header_right .logins {
+  position: absolute;
+  z-index: 99; }
+
+header .head .header_right .person {
+  position: absolute;
+  z-index: 10; }
+
+header .head .header_right li {
   line-height: 40px;
   padding-left: 34px; }
 
-header .header_right li:nth-child(1) {
+header .head .header_right li:nth-child(1) {
   background: url(../img/icon1.png) no-repeat;
   background-position: 8px; }
 
-header .header_right li:nth-child(2) {
+header .head .header_right li:nth-child(2) {
   background: url(../img/icon2.png) no-repeat;
   background-position: 8px; }
 
-header .header_right li:nth-child(3) {
+header .head .header_right li:nth-child(3) {
   background: url(../img/icon3.png) no-repeat;
   background-position: 8px; }
 
-header .header_right li a {
+header .head .header_right li a {
   color: #fff; }
+
+header .header .logo {
+  margin: 48px auto 0;
+  width: 268px; }
 
 nav {
   background: #16151b;

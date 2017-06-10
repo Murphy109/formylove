@@ -10,8 +10,10 @@ $(function(){
 	$(".nav_right li").eq(0).hover(function () {
 		$(".brand_down").slideDown("normal");
 	},function(){
-	});
+		$(".brand_down").stop().slideUp("normal");
+	})
 	$(".brand_down").hover(function () {
+		$(".brand_down").stop().slideDown("normal")
 	},function(){
 		$(".brand_down").stop().slideUp("normal");
 	});
@@ -42,4 +44,25 @@ $(function(){
 			$('.toTop img').fadeOut();
 		}
 	})
+	changeUser();
+	$(".header_center i").click(function () {
+		//console.log(getCookie("tel"));
+		removeCookie("tel");
+		//console.log(getCookie("tel"));
+		//changeUser ();
+		location.reload();
+	});
 });
+function changeUser () {
+	var cook1=getCookie("tel");
+	if(cook1!=""){
+		$(".header_center span").text(cook1).css("color","#edc89e")
+		$(".logins").css({"opacity":"0","zIndex":"10"});
+		$(".person").css({"opacity":"1","zIndex":"99"});
+		$(".header_center").css("opacity","1")
+	}else{
+		$(".logins").css({"opacity":"1","zIndex":"99"});
+		$(".person").css({"opacity":"0","zIndex":"10"});
+		$(".header_center").css("opacity","0")
+	}
+}

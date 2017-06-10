@@ -69,8 +69,14 @@
   padding: 10px 0 0 30px;
   box-sizing: border-box; }
 
+.reg_index .reg_form form ul .check span {
+  margin-right: 150px;
+  display: block;
+  width: 40px; }
+
 .reg_index .reg_form form ul .step_sub {
-  border: 0; }
+  border: 0;
+  cursor: pointer; }
 
 .reg_index .reg_form form ul .step_sub #sub {
   width: 100%;

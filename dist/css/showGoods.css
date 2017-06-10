@@ -1,0 +1,209 @@
+.margin {
+  width: 1200px;
+  margin: auto; }
+
+.curr {
+  background: #16151b;
+  color: #fff;
+  font: 12px/50px "";
+  height: 50px; }
+
+.curr .curr_cont a {
+  color: #fff;
+  margin: 0 auto; }
+
+.goods {
+  background: #15161b;
+  overflow: hidden; }
+
+.goods .goods_att {
+  min-height: 693px;
+  overflow: hidden;
+  color: #fff; }
+
+.goods .goods_att .goods_l {
+  width: 855px;
+  height: 626px;
+  background: url(../img/goods_bg.jpg) no-repeat;
+  float: left;
+  position: relative;
+  overflow: hidden; }
+
+.goods .goods_att .goods_l .big_img {
+  width: 855px;
+  height: 626px;
+  position: absolute; }
+
+.goods .goods_att .goods_l .big_img li {
+  display: none; }
+
+.goods .goods_att .goods_l .big_img li:nth-of-type(1) {
+  display: block; }
+
+.goods .goods_att .goods_l .small_img {
+  position: absolute;
+  left: 50px;
+  top: 530px;
+  height: 30px;
+  z-index: 999; }
+
+.goods .goods_att .goods_l .small_img li {
+  width: 120px;
+  height: 90px;
+  float: left; }
+
+.goods .goods_att .goods_l .small_img li img {
+  width: 120px;
+  height: 90px; }
+
+.goods .goods_att .goods_r {
+  float: right;
+  width: 345px;
+  min-height: 693px; }
+
+.goods .goods_att .goods_r h1 {
+  padding: 50px 0;
+  border-bottom: 1px solid #919295;
+  height: 40px;
+  width: 345px;
+  font: 700 26px/40px "";
+  color: #edc89e;
+  text-align: center; }
+
+.goods .goods_att .goods_r .desc {
+  height: 40px;
+  font: 14px/20px "";
+  width: 345px;
+  color: #edc89e;
+  text-align: left;
+  margin: 20px 0;
+  padding: 5px 20px; }
+
+.goods .goods_att .goods_r i {
+  height: 40px;
+  font: 14px/20px "";
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 5px 20px; }
+
+.goods .goods_att .goods_r i:hover {
+  cursor: pointer;
+  height: 40px;
+  font: 14px/20px "";
+  color: #edc89e;
+  border: 1px solid #edc89e;
+  padding: 5px 20px; }
+
+.goods .goods_att .goods_r .select {
+  border-bottom: 1px solid #919295;
+  height: 40px;
+  font: 14px/20px "";
+  color: #edc89e;
+  padding: 30px 20px; }
+
+.goods .goods_att .goods_r .select select {
+  height: 30px;
+  font: 14px/20px "";
+  text-align: center;
+  color: #edc89e;
+  border: 1px solid #edc89e;
+  background: initial;
+  padding: 0px 10px;
+  outline: none; }
+
+.goods .goods_att .goods_r .select select option {
+  text-align: center; }
+
+.goods .goods_att .goods_r .select input {
+  height: 30px;
+  font: 14px/20px "";
+  color: #edc89e;
+  border: 1px solid #edc89e;
+  background: initial;
+  padding-left: 10px;
+  outline: none; }
+
+.goods .goods_att .goods_r .money {
+  display: block;
+  height: 40px;
+  font: 14px/20px "";
+  color: #edc89e;
+  background: initial;
+  padding-left: 10px;
+  outline: none;
+  margin: 40px 0; }
+
+.goods .goods_att .goods_r .money b {
+  display: block;
+  height: 40px;
+  font: 700 26px/40px "";
+  color: #edc89e;
+  background: initial;
+  padding-left: 10px;
+  outline: none;
+  text-align: center; }
+
+.goods .goods_att .goods_r p {
+  transition: 0.5s;
+  width: 200px;
+  font: 16px/40px "";
+  text-align: center;
+  border: 1px solid #edc89e;
+  background: #000;
+  color: #fff;
+  margin: 30px auto; }
+
+.goods .goods_att .goods_r p:hover {
+  border-radius: 20px; }
+
+.goods .goods_att .goods_r span {
+  transition: 0.5s;
+  display: block;
+  width: 200px;
+  font: 16px/40px "";
+  text-align: center;
+  background: #edc89e;
+  color: #000;
+  margin: 30px auto; }
+
+.goods .goods_att .goods_r span:hover {
+  border-radius: 20px; }
+
+.incrd {
+  background: url(../img/goods_c_bg.gif) repeat; }
+
+.goods_c_bg {
+  width: 100%; }
+  .goods_c_bg .goods_title {
+    height: 204px; }
+    .goods_c_bg .goods_title h4 {
+      font-size: 16px;
+      text-align: center;
+      color: #EDC89E;
+      line-height: 60px;
+      padding-top: 40px;
+      font-weight: 400; }
+    .goods_c_bg .goods_title .point {
+      width: 38px;
+      height: 15px;
+      margin: 0 auto;
+      display: block;
+      margin-bottom: 22px; }
+    .goods_c_bg .goods_title .text_center {
+      text-align: center;
+      font-size: 15px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      color: #EDC89E; }
+  .goods_c_bg .goods_dia {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-bottom: 70px; }
+    .goods_c_bg .goods_dia a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 12px;
+      outline: none; }
+    .goods_c_bg .goods_dia img {
+      padding: 12px 0; }
