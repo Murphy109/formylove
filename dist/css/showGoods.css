@@ -80,6 +80,7 @@
   padding: 5px 20px; }
 
 .goods .goods_att .goods_r i {
+  cursor: pointer;
   height: 40px;
   font: 14px/20px "";
   color: #fff;
@@ -87,7 +88,6 @@
   padding: 5px 20px; }
 
 .goods .goods_att .goods_r i:hover {
-  cursor: pointer;
   height: 40px;
   font: 14px/20px "";
   color: #edc89e;

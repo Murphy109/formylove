@@ -3,7 +3,9 @@ $(function () {
 	$("#top").load("pubilcTop.html")
 	$("#foot").load("publicFoot.html")
 	createGoods ()
-
+	$(".tijiao").click(function () {
+		alert("提交订单成功！")
+	})
 	
 });
 var tel=getCookie("tel");
